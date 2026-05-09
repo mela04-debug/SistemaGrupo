@@ -21,7 +21,7 @@ public class Conexion {
         try {
 
             String url =
-            "jdbc:sqlserver://192.168.1.4:1433;" +
+            "jdbc:sqlserver://26.240.15.208:1433;" +
             "databaseName=ProyectoGrupo;" +
             "encrypt=true;" +
             "trustServerCertificate=true;";
