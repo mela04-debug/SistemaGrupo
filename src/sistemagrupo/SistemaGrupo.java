@@ -4,6 +4,8 @@
  */
 package sistemagrupo;
 
+import conexion.Conexion;
+
 /**
  *
  * @author Melani
