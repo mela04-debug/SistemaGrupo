@@ -6,20 +6,19 @@ package modelo;
 public class UsuarioRol {
     // ATRIBUTOS
     private int idUsuarioRol;
-
-    private Usuario usuario;
-    private Rol rol;
+    private int idUsuario;
+    private int idRol;
 
     public UsuarioRol() {
     }
     
     public UsuarioRol(int idUsuarioRol,
-                      Usuario usuario,
-                      Rol rol) {
+                      int idUsuario,
+                      int idRol) {
 
         this.idUsuarioRol = idUsuarioRol;
-        this.usuario = usuario;
-        this.rol = rol;
+        this.idUsuario = idUsuario;
+        this.idRol = idRol;
     }
 
     public int getIdUsuarioRol() {
@@ -30,19 +29,19 @@ public class UsuarioRol {
         this.idUsuarioRol = idUsuarioRol;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public Rol getRol() {
-        return rol;
+    public int getIdRol() {
+        return idRol;
     }
 
-    public void setRol(Rol rol) {
-        this.rol = rol;
+    public void setIdRol(int idRol) {
+        this.idRol = idRol;
     }
 }

@@ -1,8 +1,4 @@
 package modelo;
-//import java.util.Date;
-
-import vista.EmpleadoForm;
-
 /**
  *
  * @author Lenovo Jorge
@@ -15,7 +11,7 @@ public class Usuario {
     private String estado;
 
     // RELACIÓN CON EMPLEADO
-    private EmpleadoForm empleado;
+    private int idEmpleado;
 
     public Usuario() {
     }
@@ -24,13 +20,13 @@ public class Usuario {
                    String username,
                    String passwordHash,
                    String estado,
-                   EmpleadoForm empleado) {
+                   int idEmpleado) {
 
         this.idUsuario = idUsuario;
         this.username = username;
         this.passwordHash = passwordHash;
         this.estado = estado;
-        this.empleado = empleado;
+        this.idEmpleado = idEmpleado;
     }
 
     public int getIdUsuario() {
@@ -65,11 +61,15 @@ public class Usuario {
         this.estado = estado;
     }
 
-    public EmpleadoForm getEmpleado() {
-        return empleado;
+    public int  getIdEmpleado() {
+        return idEmpleado;
     }
 
-    public void setEmpleado(EmpleadoForm empleado) {
-        this.empleado = empleado;
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
+     @Override
+    public String toString() {
+        return username;
     }
 }

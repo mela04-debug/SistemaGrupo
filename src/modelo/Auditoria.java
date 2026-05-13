@@ -6,36 +6,28 @@ import java.util.Date;
  */
 public class Auditoria {
     
-
     private int idAuditoria;
     private String tablaAfectada;
     private String operacion;
-    //Relacion con Usuario
-    private Usuario usuario;
-    
-    private Date fecha;
-   
+    private int idUsuario;
+    private Date fechaHora;
     private String datosAnteriores;
     private String datosNuevos;
-
+    
     public Auditoria() {
     }
-
-    public Auditoria(int idAuditoria,
-                     Usuario usuario,
-                     String tablaAfectada,
-                     String operacion,
-                     String datosAnteriores,
-                     String datosNuevos,
-                     Date fecha) {
-
+    
+    public Auditoria (int idAuditoria, String tablaAfectada,
+                        String operacion, int idUsuario, Date fechaHora,
+                        String datosAnteriores, String datosNuevos){
+        
         this.idAuditoria = idAuditoria;
-        this.usuario = usuario;
         this.tablaAfectada = tablaAfectada;
         this.operacion = operacion;
+        this.idUsuario = idUsuario;
+        this.fechaHora = fechaHora;
         this.datosAnteriores = datosAnteriores;
         this.datosNuevos = datosNuevos;
-        this.fecha = fecha;
     }
 
     public int getIdAuditoria() {
@@ -44,14 +36,6 @@ public class Auditoria {
 
     public void setIdAuditoria(int idAuditoria) {
         this.idAuditoria = idAuditoria;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
     }
 
     public String getTablaAfectada() {
@@ -70,6 +54,22 @@ public class Auditoria {
         this.operacion = operacion;
     }
 
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public Date getFechaHora() {
+        return fechaHora;
+    }
+
+    public void setFechaHora(Date fechaHora) {
+        this.fechaHora = fechaHora;
+    }
+
     public String getDatosAnteriores() {
         return datosAnteriores;
     }
@@ -77,20 +77,12 @@ public class Auditoria {
     public void setDatosAnteriores(String datosAnteriores) {
         this.datosAnteriores = datosAnteriores;
     }
-    
-     public String getDatosNuevos() {
+
+    public String getDatosNuevos() {
         return datosNuevos;
     }
 
     public void setDatosNuevos(String datosNuevos) {
         this.datosNuevos = datosNuevos;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 }
