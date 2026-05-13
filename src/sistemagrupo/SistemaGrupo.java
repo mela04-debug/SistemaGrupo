@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package sistemagrupo;
 
-import conexion.Conexion;
+package sistemagrupo;
+import dao.UsuarioDAO;
 
 /**
  *
@@ -14,8 +10,28 @@ public class SistemaGrupo {
 
     public static void main(String[] args) {
 
-        Conexion c = new Conexion();
-        c.conectar();
+        UsuarioDAO usuarioDAO =
+                new UsuarioDAO();
 
+        boolean acceso =
+                usuarioDAO.login(
+                        //pendiente crear usuario con privilegios
+                        "jmendoza",
+                        "123456"
+                );
+
+        if (acceso) {
+
+            System.out.println(
+                    "LOGIN CORRECTO"
+            );
+
+        } else {
+
+            System.out.println(
+                    "USUARIO O PASSWORD INCORRECTOS"
+            );
+
+        }
     }
 }
