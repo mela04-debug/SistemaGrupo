@@ -1,0 +1,9 @@
+# Carpetas compiladas
+build/
+dist/
+
+# NetBeans
+nbproject/private/
+
+# Java compilado
+*.class
