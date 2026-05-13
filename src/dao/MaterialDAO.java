@@ -8,6 +8,6 @@ package dao;
  *
  * @author Melani
  */
-public class UsuarioDAO {
+public class MaterialDAO {
     
 }
