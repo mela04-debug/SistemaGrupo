@@ -7,3 +7,5 @@ nbproject/private/
 
 # Java compilado
 *.class
+*.log
+*.tmp
